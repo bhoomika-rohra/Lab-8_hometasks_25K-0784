@@ -1,41 +1,34 @@
 #include <stdio.h>
 
 int main() {
-    int i, j, rows, count;
-
-    printf("Enter number of rows: ");
-    scanf("%d", &rows);
+    int i, j, space;
+    int rows = 5;
 
     for(i = 1; i <= rows; i++) {
-        count = 2 * i - 1;
-
-        for(j = i; j < rows; j++) {
-            printf("  ");
-        }
-        for(j = 1; j <= count; j++) {
-            printf("* ");
-        }
-
-        printf(" | ");
-
-        for(j = i; j < rows; j++) {
-            printf("  ");
-        }
-        for(j = 1; j <= count; j++) {
-            printf("%d ", j);
-        }
-
-        printf(" | ");
-
-        for(j = i; j < rows; j++) {
-            printf("  ");
-        }
-        for(j = 1; j <= count; j++) {
-            printf("%c ", 'A' + j - 1);
-        }
-
+  
+        for(space = i; space < rows; space++)
+            printf(" ");
+        for(j = 1; j <= (2*i - 1); j++)
+            printf("*");
         printf("\n");
     }
+    printf("\n");
+       for(i = 1; i <= rows; i++) {
+        for(space = i; space < rows; space++)
+            printf(" ");
+        for(j = 1; j <= (2*i - 1); j++)
+            printf("%d",j);
+        printf("\n");
+    }
+    printf("\n");
+   for(i = 1; i <= rows; i++) {
+        for(space = i; space < rows; space++)
+            printf(" ");
+        for(j = 1; j <= (2*i - 1); j++)
+            printf("%c",'A'+j-1);
+        printf("\n");
+    }
+
 
     return 0;
 }
